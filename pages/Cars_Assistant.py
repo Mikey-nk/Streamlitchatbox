@@ -4,9 +4,7 @@ import os
 
 # Load API key from environment variable
 api_key = os.getenv("GEMINI_API_KEY")
-if not api_key:
-    st.error("Google API key not found. Please set the GOOGLE_API_KEY environment variable.")
-    st.stop()
+
 
 genai.configure(api_key=api_key)
 
